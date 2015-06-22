@@ -21,8 +21,6 @@
     <languages>
         <language tag="en-GB">language/en-GB.mod_bpromo.ini</language>
         <language tag="en-GB">language/en-GB.mod_bpromo.sys.ini</language>
-        <language tag="he-IL">language/he-IL.mod_bpromo.ini</language>
-        <language tag="he-IL">language/he-IL.mod_bpromo.sys.ini</language>
     </languages>
 	
     <config>
