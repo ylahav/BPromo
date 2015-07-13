@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" method="upgrade" client="site">
+    <name>mod_bpromo</name>
+    <creationDate>2015 june 21</creationDate>
+    <author></author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <copyright></copyright>
+    <license></license>
+    <version>1.0.1</version>
+    <description>MOD_BPROMO_XML_DESCRIPTION</description>
+
+    <files>
+        <filename module="mod_bpromo">mod_bpromo.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_bpromo.ini</language>
+        <language tag="en-GB">language/en-GB.mod_bpromo.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+                <field
+                    name="timer"
+                    type="text"
+                    default="7"
+                    label="MOD_BPROMO_TIMER_FIELD_LABEL"
+                    description="MOD_BPROMO_TIMER_FIELD_DESC" />
+                <field
+                    name="samepage"
+                    type="radio"
+                    default="0"
+                    label="MOD_BPROMO_SAMEPAGE_FIELD_LABEL"
+                    description="MOD_BPROMO_SAMEPAGE_FIELD_DESC">
+                    <option value="0">MOD_BPROMO_SAMEPAGE_YES</option>
+                    <option value="1">MOD_BPROMO_SAMEPAGE_NO</option>
+                </field>
+                <field
+                    name="image1"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE1_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE1_FIELD_DESC" />
+                <field
+                    name="url1"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL1_FIELD_LABEL"
+                    description="MOD_BPROMO_URL1_FIELD_DESC" />
+                <field
+                    name="image2"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE2_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE2_FIELD_DESC" />
+                <field
+                    name="url2"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL2_FIELD_LABEL"
+                    description="MOD_BPROMO_URL2_FIELD_DESC" />
+                <field
+                    name="image3"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE3_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE3_FIELD_DESC" />
+                <field
+                    name="url3"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL3_FIELD_LABEL"
+                    description="MOD_BPROMO_URL3_FIELD_DESC" />
+                <field
+                    name="image4"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE4_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE4_FIELD_DESC" />
+                <field
+                    name="url4"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL4_FIELD_LABEL"
+                    description="MOD_BPROMO_URL4_FIELD_DESC" />
+                <field
+                    name="image5"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE5_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE5_FIELD_DESC" />
+                <field
+                    name="url5"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL5_FIELD_LABEL"
+                    description="MOD_BPROMO_URL5_FIELD_DESC" />
+                <field
+                    name="image6"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE_FIELD6_LABEL"
+                    description="MOD_BPROMO_IMAGE6_FIELD_DESC" />
+                <field
+                    name="url6"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL6_FIELD_LABEL"
+                    description="MOD_BPROMO_URL6_FIELD_DESC" />
+                <field
+                    name="image7"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE7_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE7_FIELD_DESC" />
+                <field
+                    name="url7"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL7_FIELD_LABEL"
+                    description="MOD_BPROMO_URL7_FIELD_DESC" />
+                <field
+                    name="image8"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE8_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE8_FIELD_DESC" />
+                <field
+                    name="url8"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL8_FIELD_LABEL"
+                    description="MOD_BPROMO_URL8_FIELD_DESC" />
+                <field
+                    name="image9"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE9_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE9_FIELD_DESC" />
+                <field
+                    name="url9"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL9_FIELD_LABEL"
+                    description="MOD_BPROMO_URL9_FIELD_DESC" />
+                <field
+                    name="image10"
+                    type="media"
+                    label="MOD_BPROMO_IMAGE10_FIELD_LABEL"
+                    description="MOD_BPROMO_IMAGE10_FIELD_DESC" />
+                <field
+                    name="url10"
+                    type="text"
+                    default=""
+                    label="MOD_BPROMO_URL10_FIELD_LABEL"
+                    description="MOD_BPROMO_URL10_FIELD_DESC" />
+            </fieldset>
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static">
+                    <option
+                        value="static">
+                    </option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
