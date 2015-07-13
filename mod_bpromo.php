@@ -7,6 +7,10 @@
 
 defined("_JEXEC") or die("Restricted access");
 
+JPluginHelper::importPlugin('system');
+$dispatcher = JDispatcher::getInstance();
+$results = $dispatcher->trigger( 'onGetVisitorInfo' );
+
 $scriptContent = "
 	setTimeout(function(){
     	document.getElementById('b-promo-out').style.display = 'none';
