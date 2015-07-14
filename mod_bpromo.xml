@@ -41,116 +41,187 @@
                     <option value="0">MOD_BPROMO_SAMEPAGE_YES</option>
                     <option value="1">MOD_BPROMO_SAMEPAGE_NO</option>
                 </field>
-                <field
-                    name="image1"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE1_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE1_FIELD_DESC" />
-                <field
-                    name="url1"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL1_FIELD_LABEL"
-                    description="MOD_BPROMO_URL1_FIELD_DESC" />
-                <field
-                    name="image2"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE2_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE2_FIELD_DESC" />
-                <field
-                    name="url2"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL2_FIELD_LABEL"
-                    description="MOD_BPROMO_URL2_FIELD_DESC" />
-                <field
-                    name="image3"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE3_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE3_FIELD_DESC" />
-                <field
-                    name="url3"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL3_FIELD_LABEL"
-                    description="MOD_BPROMO_URL3_FIELD_DESC" />
-                <field
-                    name="image4"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE4_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE4_FIELD_DESC" />
-                <field
-                    name="url4"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL4_FIELD_LABEL"
-                    description="MOD_BPROMO_URL4_FIELD_DESC" />
-                <field
-                    name="image5"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE5_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE5_FIELD_DESC" />
-                <field
-                    name="url5"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL5_FIELD_LABEL"
-                    description="MOD_BPROMO_URL5_FIELD_DESC" />
-                <field
-                    name="image6"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE_FIELD6_LABEL"
-                    description="MOD_BPROMO_IMAGE6_FIELD_DESC" />
-                <field
-                    name="url6"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL6_FIELD_LABEL"
-                    description="MOD_BPROMO_URL6_FIELD_DESC" />
-                <field
-                    name="image7"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE7_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE7_FIELD_DESC" />
-                <field
-                    name="url7"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL7_FIELD_LABEL"
-                    description="MOD_BPROMO_URL7_FIELD_DESC" />
-                <field
-                    name="image8"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE8_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE8_FIELD_DESC" />
-                <field
-                    name="url8"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL8_FIELD_LABEL"
-                    description="MOD_BPROMO_URL8_FIELD_DESC" />
-                <field
-                    name="image9"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE9_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE9_FIELD_DESC" />
-                <field
-                    name="url9"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL9_FIELD_LABEL"
-                    description="MOD_BPROMO_URL9_FIELD_DESC" />
-                <field
-                    name="image10"
-                    type="media"
-                    label="MOD_BPROMO_IMAGE10_FIELD_LABEL"
-                    description="MOD_BPROMO_IMAGE10_FIELD_DESC" />
-                <field
-                    name="url10"
-                    type="text"
-                    default=""
-                    label="MOD_BPROMO_URL10_FIELD_LABEL"
-                    description="MOD_BPROMO_URL10_FIELD_DESC" />
+            </fieldset>
+            <fieldset name="rules" label="COM_MODULES_RULES_FIELDSET_LABEL">
+                <field name="default_note" type="note" description="COM_MODULES_DEFAULT_RULE_LABEL" />
+                <fields name="ruledefault" label="COM_MODULES_DEFAULT_RULE_LABEL">
+                    <field name="ruletype"
+                           type="hidden"
+                           default="default" />
+                    <field name="image"
+                           type="folderlist"
+                           directory="images/bpromo"
+                           class="rules-iamges"
+                           label="MOD_BPROMO_IMAGE_FIELD_LABEL"
+                           description="MOD_BPROMO_IMAGE_FIELD_DESC" />
+                    <field name="url"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_URL_FIELD_LABEL"
+                           description="MOD_BPROMO_URL_FIELD_DESC" />
+                </fields>
+                <field name="note1" type="note" description="COM_MODULES_RULE1_LABEL" />
+                <fields name="rule1" label="COM_MODULES_RULE1_LABEL">
+                    <field name="ruletype"
+                           type="radio"
+                           label="MOD_BPROMO_RULETYPE_FIELD_LABEL"
+                           description="MOD_BPROMO_RULETYPE_FIELD_DESC">
+	                    <option value="continent">MOD_BPROMO_RULE_CONTINENT</option>
+	                    <option value="country">MOD_BPROMO_RULE_COUNTRY</option>
+	                    <option value="currency">MOD_BPROMO_RULE_CURRENCY</option>
+                    </field>
+                    <field name="reulevals"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_RULEVALSL_FIELD_LABEL"
+                           description="MOD_BPROMO_RULEVALS_FIELD_DESC" />
+                    <field name="image"
+                           type="folderlist"
+                           directory="images/bpromo"
+                           class="rules-iamges"
+                           label="MOD_BPROMO_IMAGE_FIELD_LABEL"
+                           description="MOD_BPROMO_IMAGE_FIELD_DESC" />
+                    <field name="url"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_URL_FIELD_LABEL"
+                           description="MOD_BPROMO_URL_FIELD_DESC" />
+                </fields>
+                <field name="note2" type="note" description="COM_MODULES_RULE2_LABEL" />
+                <fields name="rule2" label="COM_MODULES_RULE2_LABEL">
+                    <field name="ruletype"
+                           type="radio"
+                           label="MOD_BPROMO_RULETYPE_FIELD_LABEL"
+                           description="MOD_BPROMO_RULETYPE_FIELD_DESC">
+	                    <option value="continent">MOD_BPROMO_RULE_CONTINENT</option>
+	                    <option value="country">MOD_BPROMO_RULE_COUNTRY</option>
+	                    <option value="currency">MOD_BPROMO_RULE_CURRENCY</option>
+                    </field>
+                    <field name="reulevals"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_RULEVALSL_FIELD_LABEL"
+                           description="MOD_BPROMO_RULEVALS_FIELD_DESC" />
+                    <field name="image"
+                           type="folderlist"
+                           directory="images/bpromo"
+                           class="rules-iamges"
+                           label="MOD_BPROMO_IMAGE_FIELD_LABEL"
+                           description="MOD_BPROMO_IMAGE_FIELD_DESC" />
+                    <field name="url"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_URL_FIELD_LABEL"
+                           description="MOD_BPROMO_URL_FIELD_DESC" />
+                </fields>
+                <field name="note3" type="note" description="COM_MODULES_RULE3_LABEL" />
+                <fields name="rule3" label="COM_MODULES_RULE3_LABEL">
+                    <field name="ruletype"
+                           type="radio"
+                           label="MOD_BPROMO_RULETYPE_FIELD_LABEL"
+                           description="MOD_BPROMO_RULETYPE_FIELD_DESC">
+	                    <option value="continent">MOD_BPROMO_RULE_CONTINENT</option>
+	                    <option value="country">MOD_BPROMO_RULE_COUNTRY</option>
+	                    <option value="currency">MOD_BPROMO_RULE_CURRENCY</option>
+                    </field>
+                    <field name="reulevals"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_RULEVALSL_FIELD_LABEL"
+                           description="MOD_BPROMO_RULEVALS_FIELD_DESC" />
+                    <field name="image"
+                           type="folderlist"
+                           directory="images/bpromo"
+                           class="rules-iamges"
+                           label="MOD_BPROMO_IMAGE_FIELD_LABEL"
+                           description="MOD_BPROMO_IMAGE_FIELD_DESC" />
+                    <field name="url"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_URL_FIELD_LABEL"
+                           description="MOD_BPROMO_URL_FIELD_DESC" />
+                </fields>
+                <field name="note4" type="note" description="COM_MODULES_RULE4_LABEL" />
+                <fields name="rule4" label="COM_MODULES_RULE4_LABEL">
+                    <field name="ruletype"
+                           type="radio"
+                           label="MOD_BPROMO_RULETYPE_FIELD_LABEL"
+                           description="MOD_BPROMO_RULETYPE_FIELD_DESC">
+	                    <option value="continent">MOD_BPROMO_RULE_CONTINENT</option>
+	                    <option value="country">MOD_BPROMO_RULE_COUNTRY</option>
+	                    <option value="currency">MOD_BPROMO_RULE_CURRENCY</option>
+                    </field>
+                    <field name="reulevals"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_RULEVALSL_FIELD_LABEL"
+                           description="MOD_BPROMO_RULEVALS_FIELD_DESC" />
+                    <field name="image"
+                           type="folderlist"
+                           directory="images/bpromo"
+                           class="rules-iamges"
+                           label="MOD_BPROMO_IMAGE_FIELD_LABEL"
+                           description="MOD_BPROMO_IMAGE_FIELD_DESC" />
+                    <field name="url"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_URL_FIELD_LABEL"
+                           description="MOD_BPROMO_URL_FIELD_DESC" />
+                </fields>
+                <field name="note5" type="note" description="COM_MODULES_RULE5_LABEL" />
+                <fields name="rule5" label="COM_MODULES_RULE5_LABEL">
+                    <field name="ruletype"
+                           type="radio"
+                           label="MOD_BPROMO_RULETYPE_FIELD_LABEL"
+                           description="MOD_BPROMO_RULETYPE_FIELD_DESC">
+	                    <option value="continent">MOD_BPROMO_RULE_CONTINENT</option>
+	                    <option value="country">MOD_BPROMO_RULE_COUNTRY</option>
+	                    <option value="currency">MOD_BPROMO_RULE_CURRENCY</option>
+                    </field>
+                    <field name="reulevals"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_RULEVALSL_FIELD_LABEL"
+                           description="MOD_BPROMO_RULEVALS_FIELD_DESC" />
+                    <field name="image"
+                           type="folderlist"
+                           directory="images/bpromo"
+                           class="rules-iamges"
+                           label="MOD_BPROMO_IMAGE_FIELD_LABEL"
+                           description="MOD_BPROMO_IMAGE_FIELD_DESC" />
+                    <field name="url"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_URL_FIELD_LABEL"
+                           description="MOD_BPROMO_URL_FIELD_DESC" />
+                </fields>
+                <field name="note6" type="note" description="COM_MODULES_RULE6_LABEL" />
+                <fields name="rule6" label="COM_MODULES_RULE6_LABEL">
+                    <field name="ruletype"
+                           type="radio"
+                           label="MOD_BPROMO_RULETYPE_FIELD_LABEL"
+                           description="MOD_BPROMO_RULETYPE_FIELD_DESC">
+	                    <option value="continent">MOD_BPROMO_RULE_CONTINENT</option>
+	                    <option value="country">MOD_BPROMO_RULE_COUNTRY</option>
+	                    <option value="currency">MOD_BPROMO_RULE_CURRENCY</option>
+                    </field>
+                    <field name="reulevals"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_RULEVALSL_FIELD_LABEL"
+                           description="MOD_BPROMO_RULEVALS_FIELD_DESC" />
+                    <field name="image"
+                           type="folderlist"
+                           directory="images/bpromo"
+                           class="rules-iamges"
+                           label="MOD_BPROMO_IMAGE_FIELD_LABEL"
+                           description="MOD_BPROMO_IMAGE_FIELD_DESC" />
+                    <field name="url"
+                           type="text"
+                           default=""
+                           label="MOD_BPROMO_URL_FIELD_LABEL"
+                           description="MOD_BPROMO_URL_FIELD_DESC" />
+                </fields>
             </fieldset>
             <fieldset
                 name="advanced">
