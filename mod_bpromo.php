@@ -9,7 +9,7 @@ defined("_JEXEC") or die("Restricted access");
 
 JPluginHelper::importPlugin('system');
 $dispatcher = JDispatcher::getInstance();
-$results = $dispatcher->trigger( 'onGetVisitorInfo' );
+$customerInfo = $dispatcher->trigger( 'onGetVisitorInfo' );
 
 $scriptContent = "
 	setTimeout(function(){
@@ -20,8 +20,8 @@ $doc =& JFactory::getDocument();
 $doc->addScriptDeclaration( $scriptContent );
 $doc->addStyleSheet( JURI::base() . "/modules/mod_bpromo/css/style.css");
 
-// Include the syndicate functions only once
 require_once __DIR__ . '/helper.php';
-$item = ModBpromoHelper::getItem($params);
+
+$item = ModBpromoHelper::getItem($params, $customerInfo[0]);
 
 require JModuleHelper::getLayoutPath('mod_bpromo', $params->get('layout', 'default'));
