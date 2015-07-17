@@ -2,3 +2,5 @@
 
 popup pomotion - show (random) image for several seconds... and disapear
 
+In order to use this module with the filter the plugin BVinfo (visitor info.) should be install and activate
+
