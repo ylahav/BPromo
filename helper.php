@@ -37,7 +37,7 @@ class ModBpromoHelper
 		/* check rules... */
 		for ($idx = 0; $idex < 6; $idex++) {
 			$curRule = $params['rule' . strval($idex + 1)];
-			if (!empty($curRule->ruletype)) {
+			if (!empty($curRule->ruletype) && !empty($visitorInfo)) {
 				$visitorData = ModBpromoHelper::getVisitorData( $curRule->ruletype, $visitorInfo );
 				if (in_array( $visitorData, explode(",",$curRule->reulevals) )) {
 					$imagesDir = $curRule->image;
