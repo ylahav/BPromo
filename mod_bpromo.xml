@@ -2,12 +2,12 @@
 <extension version="3.0" type="module" method="upgrade" client="site">
     <name>mod_bpromo</name>
     <creationDate>2015 june 21</creationDate>
-    <author></author>
-    <authorEmail></authorEmail>
-    <authorUrl></authorUrl>
-    <copyright></copyright>
-    <license></license>
-    <version>1.0.3</version>
+    <author>Yair Lahav</author>
+    <authorEmail>yair@bonimba.co.il</authorEmail>
+    <authorUrl>www.bonimba.co.il</authorUrl>
+    <copyright>Copyright (C) 2015 Yair Lahav. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.4</version>
     <description>MOD_BPROMO_XML_DESCRIPTION</description>
 
     <files>
