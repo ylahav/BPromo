@@ -40,15 +40,15 @@ class ModBpromoHelper
         $rulesEncoded = $params['list_rules'];
         $rules = json_decode($rulesEncoded);
         if (!empty( $rules )) {
-            foreach( $rules as $aRule ) {
-                if (!empty($aRule->ruletype) && !empty($visitorInfo)) {
-                    $visitorData = ModBpromoHelper::getVisitorData( $aRule->ruletype, $visitorInfo );
-                    if (in_array( $visitorData, explode(",",$aRule->reulevals) )) {
-                        $imagesDir = $aRule->image;
+            for( $idx = 0; $idx < count( $rules->ruleType ); $idx++ ) {
+				if (!empty($rules->ruleType[$idx]) && !empty($visitorInfo)) {
+                    $visitorData = ModBpromoHelper::getVisitorData( $rules->ruleType[$idx], $visitorInfo );
+                    if (in_array( $visitorData, explode(",", $rules->reulevals[$idx]) )) {
+                        $imagesDir = $rules->image[$idx];
                         $images = glob(JPATH_ROOT . "/images/" . $imagesDir . "/*.{jpg,png,gif}", GLOB_BRACE);
                         $jdx = rand(0, count($images) - 1);
                         $item['image'] = JURI::base() . "images/" . $imagesDir . "/" . basename($images[$jdx]);
-                        $item['url'] = $aRule->url;
+                        $item['url'] = $rules->url[$idx];
                         break;
                     }
                 }
