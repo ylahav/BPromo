@@ -14,7 +14,6 @@
         <filename module="mod_bpromo">mod_bpromo.php</filename>
         <filename>helper.php</filename>
         <filename>index.html</filename>
-        <filename>script.php</filename>
         <folder>tmpl</folder>
         <folder>css</folder>
     </files>
@@ -23,12 +22,6 @@
         <language tag="en-GB">language/en-GB.mod_bpromo.ini</language>
         <language tag="en-GB">language/en-GB.mod_bpromo.sys.ini</language>
     </languages>
-
-    <install>
-        <sql>
-            <file driver="mysql" charset="utf8">mysql/install.mysql.sql</file>
-        </sql>
-    </install>
 
     <config>
         <fields name="params" addfieldpath="/modules/mod_bpromo/fields">
