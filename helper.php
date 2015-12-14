@@ -18,37 +18,40 @@ class ModBpromoHelper
 	static function getVisitorData ($dataType, $visitorInfo) {
 		switch ($dataType) {
 			case "country":
-				return $visitorInfo->countryCode;
+				return $visitorInfo['countryCode'];
             case "continent":
-                return $visitorInfo->continentCode;
+                return $visitorInfo['continentCode'];
             case "currency":
-                return $visitorInfo->currencyCode;
+                return $visitorInfo['currencyCode'];
 		}
 		return $visitorInfo->countryCode;
 	}
 
 	public static function getItem($params, $visitorInfo)
 	{
-		$imagesDir = $params['ruledefault']->image;
-		$images = glob(JPATH_ROOT . "/images/bpromo/" . $imagesDir . "/*.{jpg,png,gif}", GLOB_BRACE);
+		$imagesDir = $params['defaultrule']->image;
+		$images = glob(JPATH_ROOT . "/images/" . $imagesDir . "/*.{jpg,png,gif}", GLOB_BRACE);
 		$jdx = rand(0, count($images) - 1);
-		$item['image'] = JURI::base() . "images/bpromo/" . $imagesDir . "/" . basename($images[$jdx]);
-		$item['url'] = $params['ruledefault']->url;
+		$item['image'] = JURI::base() . "images/" . $imagesDir . "/" . basename($images[$jdx]);
+		$item['url'] = $params['defaultrule']->url;
 		/* check rules... */
-		for ($idx = 0; $idex < 6; $idex++) {
-			$curRule = $params['rule' . strval($idex + 1)];
-			if (!empty($curRule->ruletype) && !empty($visitorInfo)) {
-				$visitorData = ModBpromoHelper::getVisitorData( $curRule->ruletype, $visitorInfo );
-				if (in_array( $visitorData, explode(",",$curRule->reulevals) )) {
-					$imagesDir = $curRule->image;
-					$images = glob(JPATH_ROOT . "/images/bpromo/" . $imagesDir . "/*.{jpg,png,gif}", GLOB_BRACE);
-					$jdx = rand(0, count($images) - 1);
-					$item['image'] = JURI::base() . "images/bpromo/" . $imagesDir . "/" . basename($images[$jdx]);
-					$item['url'] = $curRule->url;
-					break;
-				}
-			}
-		}
+        $rulesEncoded = $params['list_rules'];
+        $rules = json_decode($rulesEncoded);
+        if (!empty( $rules )) {
+            foreach( $rules as $aRule ) {
+                if (!empty($aRule->ruletype) && !empty($visitorInfo)) {
+                    $visitorData = ModBpromoHelper::getVisitorData( $aRule->ruletype, $visitorInfo );
+                    if (in_array( $visitorData, explode(",",$aRule->reulevals) )) {
+                        $imagesDir = $aRule->image;
+                        $images = glob(JPATH_ROOT . "/images/" . $imagesDir . "/*.{jpg,png,gif}", GLOB_BRACE);
+                        $jdx = rand(0, count($images) - 1);
+                        $item['image'] = JURI::base() . "images/" . $imagesDir . "/" . basename($images[$jdx]);
+                        $item['url'] = $aRule->url;
+                        break;
+                    }
+                }
+            }
+        }
 		return $item;
 	}
 }
